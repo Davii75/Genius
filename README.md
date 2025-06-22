@@ -17,10 +17,71 @@ São quatro níveis de dificuldade, que indicam quantas cores deverão ser acert
 |      3      |      20 rodadas      |
 |      4      |      31 rodadas      |
 
-O jogo começa com o jogo emitindo o primeiro sinal (um botão aleatório é ativado, acendo a luz e tocando um _bip_). Repita o sinal, pressionando o botão equivalente. Caso erre, você perde o jogo.
+Depois que o usuário seleciona a dificuldade, aparecerá uma tela mostrando as regras e como dizer a sequência:
+```
+--- Regras ---
 
-O jogo repetirá o primeiro botão e vai acrescentar mais um. Repita então os dois botões na sequência. Continue até que você consegua repetir a sequencia completa.
+Uma sequência de cores irá aparecer, acerte a ordem e passe para a próxima rodada
+Digite os números abaixo de acordo com a ordem mostrada sem espaço entre cada número
 
-Toque sons diferente para derrota, vitória e vitória na dificuldade 4.
+1 para Vermelho
+2 para Verde
+3 para Azul
+4 para Amarelo
+
+Exemplo: Vermelho Amarelo Verde =>  142
+
+Pressione 'R' para repetir o áudio     
+Pressione 'Enter' para começar
+```
+
+Ao pressionar a tecla 'Enter', será mostrado durante alguns segundos uma cor, qual o usuário deverá memorizar.
+
+```
+Rodada 1
+
+Vermelho
+```
+
+Caso o usuário acerte a cor, ele passará para a próxima rodada, onde a cor anterior será mostrada juntamente de uma nova cor, e assim sucessivamente.
+
+```
+Rodada 1
+
+Digite a sequência (sem espaços):
+1
+Vermelho
+Correto! Prepare-se para a próxima rodada...
+```
+
+Caso o usuário erre, será mostrado a sequência correta que deveria ser digitada e o jogo finaliza.
+```
+Rodada 1
+
+Digite a sequência (sem espaços):
+2
+Verde
+Sequência incorreta! Fim de jogo.
+A sequência correta era: 1
+```
+
+O jogo se estenderá até que o usuário vença todas as rodadas delimitadas pela dificuldade selecionada ou erre a sequência.
+
+## _Download_
+
+
+## Execução
+
+Caso não seja utilizado o windows, execute o programa utilizando o seguinte comando:
+```
+---comando
+```
+
+## Realizadores
+
+- [Davi de Castro Oliveira](https://github.com/Davii75)
+- [Leonardo Sacramento dos Santos](https://github.com/LeonardoSacra04)
+
+---
 
 Fontes: [Manual](https://statics-submarino.b2w.io/manuais/111703711.pdf); [_Reverse Engineering an MB Electronic Simon Game_, da Waiting for Friday](<https://www.waitingforfriday.com/?p=586#:~:text=On%20the%20full%E2%80%90size%20version%20of%20Simon%20the%20lights%20are,B3%20(true%20pitch%20247.942%20Hz)>).
