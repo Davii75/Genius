@@ -69,12 +69,13 @@ O jogo se estenderá até que o usuário vença todas as rodadas delimitadas pel
 
 ## _Download_
 
+- [Genius](/dist/Genius.zip)
 
 ## Execução
 
-Caso não seja utilizado o windows, execute o programa utilizando o seguinte comando:
+Caso não seja utilizado o windows (Não recomendado, pois o programa utiliza recursos disponíveis apenas no windows), execute o programa utilizando o seguinte comando:
 ```
----comando
+dotnet Genius.dll
 ```
 
 ## Realizadores
