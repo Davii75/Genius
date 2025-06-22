@@ -63,7 +63,7 @@ Verde(); Console.Write("2 "); ResetaCor(); Console.Write("para "); Verde(); Cons
 Azul(); Console.Write("3 "); ResetaCor(); Console.Write("para "); Azul(); Console.WriteLine("Azul"); ResetaCor(); Console.Beep(800, 400); Thread.Sleep(2000);
 Amarelo(); Console.Write("4 "); ResetaCor(); Console.Write("para "); Amarelo(); Console.WriteLine("Amarelo\n"); ResetaCor(); Console.Beep(1000, 400); Thread.Sleep(2000);
 
-Console.WriteLine("Exemplo: Vermelho Amarelo Verde =>  142\n");
+Console.Write("Exemplo: "); Vermelho();  Console.Write("Vermelho "); Amarelo(); Console.Write("Amarelo "); Verde(); Console.Write("Verde"); ResetaCor(); Console.WriteLine(" =>  142\n");
 Console.WriteLine("Pressione 'R' para repetir o áudio");
 Console.WriteLine("Pressione 'Enter' para começar");
 
@@ -96,6 +96,7 @@ while (RodadaAtual <= RodadasMax)
     }
 
     Console.Clear();
+    Console.WriteLine($"Rodada {RodadaAtual}\n");
     Console.WriteLine("Digite a sequência (sem espaços):");
     entrada = Console.ReadLine()!;
 
@@ -127,7 +128,11 @@ while (RodadaAtual <= RodadasMax)
         return;
     }
 
-    Console.WriteLine("Correto! Prepare-se para a próxima rodada...");
+    if (RodadaAtual <= RodadasMax - 1)
+    {
+        Console.WriteLine("Correto! Prepare-se para a próxima rodada...");
+    }
+    
     Thread.Sleep(1500);
     RodadaAtual++;
 }
@@ -206,6 +211,7 @@ void SomVitoriaEspecial()
     Console.Beep(1047, 200); 
     Console.Beep(784, 400);  
 }
+
 class Dificuldade
 {
     public required string Dif;
